@@ -68,6 +68,14 @@ export function reverseAllWords(words) {
 export function countLinuxUsers(users) {
   if (users === undefined) throw new Error("users is required");
   // Add your code here!
+  let sum = 0;
+  for (const key in users) {
+    if (users.hasOwnProperty("linux")) {
+      sum++;
+    }
+    return sum;
+    console.log(sum);
+  }
 }
 
 export function getMeanScore(scores) {
