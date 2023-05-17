@@ -31,6 +31,13 @@ export function getBusNumbers(people) {
 export function countSheep(arr) {
   if (arr === undefined) throw new Error("arr is required");
   // Your code here!
+  let arrSheep = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === "sheep") {
+      arrSheep.push(arr[i]);
+    }
+  }
+  return arrSheep.length;
 }
 
 export function hasMPostCode(person) {
