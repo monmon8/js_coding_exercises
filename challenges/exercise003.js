@@ -18,7 +18,6 @@ export function getTotalSubjects(people) {
   if (people === undefined) throw new Error("people is required");
   let count = 0;
   for (const person of people) {
-    console.log(person.subjects);
     count += person.subjects.length;
   }
   return count;
@@ -38,5 +37,17 @@ export function checkIngredients(menu, ingredient) {
 export function duplicateNumbers(arr1, arr2) {
   if (arr1 === undefined) throw new Error("arr1 is required");
   if (arr2 === undefined) throw new Error("arr2 is required");
-  // Your code here!
+  const numbers = [];
+
+  for (const num of arr1) {
+    const numbers = new Set();
+
+    for (const num of arr1) {
+      if (arr2.includes(num)) {
+        numbers.add(num);
+      }
+    }
+
+    return Array.from(numbers).sort();
+  }
 }
