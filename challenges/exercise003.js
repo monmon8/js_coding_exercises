@@ -16,12 +16,23 @@ export function camelCaseWords(words) {
 
 export function getTotalSubjects(people) {
   if (people === undefined) throw new Error("people is required");
+  let count = 0;
+  for (const person of people) {
+    console.log(person.subjects);
+    count += person.subjects.length;
+  }
+  return count;
 }
 
 export function checkIngredients(menu, ingredient) {
   if (menu === undefined) throw new Error("menu is required");
   if (!ingredient) throw new Error("ingredient is required");
-  // Your code here!
+  //   for (const item of menu) {
+  //     if (item.ingredients.includes(ingredient)) {
+  //       return true;
+  //     }
+  //   }
+  //   return false;
 }
 
 export function duplicateNumbers(arr1, arr2) {
