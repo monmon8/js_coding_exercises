@@ -34,7 +34,15 @@ export function findVerbs(words) {
 
 export function getIntegers(nums) {
   if (!nums) throw new Error("nums is required");
-  // Your code here
+
+  let integerNums = [];
+
+  for (let i = 0; i < nums.length; i++) {
+    if (Number.isInteger(nums[i]) === true) {
+      integerNums.push(nums[i]);
+    }
+  }
+  return integerNums;
 }
 
 export function getCities(users) {
