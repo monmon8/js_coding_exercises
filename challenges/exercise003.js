@@ -27,12 +27,12 @@ export function getTotalSubjects(people) {
 export function checkIngredients(menu, ingredient) {
   if (menu === undefined) throw new Error("menu is required");
   if (!ingredient) throw new Error("ingredient is required");
-  //   for (const item of menu) {
-  //     if (item.ingredients.includes(ingredient)) {
-  //       return true;
-  //     }
-  //   }
-  //   return false;
+  for (const item of menu) {
+    if (item.ingredients.includes(ingredient)) {
+      return true;
+    }
+  }
+  return false;
 }
 
 export function duplicateNumbers(arr1, arr2) {
