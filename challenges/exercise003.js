@@ -1,5 +1,14 @@
 export function getSquares(nums) {
   if (nums === undefined) throw new Error("nums is required");
+  let sqrtArray = [];
+  for (let i = 0; i < nums.length; i++) {
+    if (nums.length === 0) {
+      return [];
+    } else {
+      sqrtArray.push(nums[i] * nums[i]);
+    }
+  }
+  return sqrtArray;
 }
 
 export function camelCaseWords(words) {
@@ -37,17 +46,14 @@ export function checkIngredients(menu, ingredient) {
 export function duplicateNumbers(arr1, arr2) {
   if (arr1 === undefined) throw new Error("arr1 is required");
   if (arr2 === undefined) throw new Error("arr2 is required");
-  const numbers = [];
+
+  const numbers = new Set();
 
   for (const num of arr1) {
-    const numbers = new Set();
-
-    for (const num of arr1) {
-      if (arr2.includes(num)) {
-        numbers.add(num);
-      }
+    if (arr2.includes(num)) {
+      numbers.add(num);
     }
-
-    return Array.from(numbers).sort();
   }
+
+  return Array.from(numbers).sort();
 }
