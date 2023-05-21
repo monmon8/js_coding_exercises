@@ -24,9 +24,11 @@ describe("isValidDNA", () => {
   });
 });
 
-//   describe("getComplementaryDNA", () => {
-
-//   })
+describe("getComplementaryDNA", () => {
+  test("returns a string of the complementary base pairs", () => {
+    expect(getComplementaryDNA("ACTG")).toBe("TGAC");
+  });
+});
 
 //   describe("isItPrime", () => {
 
