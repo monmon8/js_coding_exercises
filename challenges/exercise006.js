@@ -45,6 +45,17 @@ export const isValidDNA = (str) => {
  */
 export const getComplementaryDNA = (str) => {
   if (str === undefined) throw new Error("str is required");
+  const complementaryPairs = { A: "T", T: "A", C: "G", G: "C" };
+  let complementaryString = "";
+
+  for (let i = 0; i < str.length; i++) {
+    const base = str[i];
+    if (base in complementaryPairs) {
+      complementaryString += complementaryPairs[base];
+    }
+  }
+
+  return complementaryString;
 };
 
 /**
