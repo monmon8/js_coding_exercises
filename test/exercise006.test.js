@@ -13,7 +13,16 @@ describe("sumMultiples", () => {
   });
 });
 
-// describe("isValidDNA", () => {});
+describe("isValidDNA", () => {
+  test("returns true if a valid DNA string contain characters C, G, T or A only", () => {
+    const str = "ABC";
+    expect(isValidDNA(str)).toBe(true);
+  });
+  test("returns false if a valid DNA string contain characters C, G, T or A only", () => {
+    const str = "LZW";
+    expect(isValidDNA(str)).toBe(false);
+  });
+});
 
 //   describe("getComplementaryDNA", () => {
 
