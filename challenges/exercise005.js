@@ -45,13 +45,30 @@ export const sumArrays = (arrs) => {
 
 export const arrShift = (arr) => {
   if (arr === undefined) throw new Error("arr is required");
-  // Your code here!
+  if (arr.length < 2) {
+    return arr;
+  }
+
+  const first = arr[0];
+  arr[0] = arr[arr.length - 1];
+  arr[arr.length - 1] = first;
+
+  return arr;
 };
 
 export const findNeedle = (haystack, searchTerm) => {
   if (haystack === undefined) throw new Error("haystack is required");
   if (searchTerm === undefined) throw new Error("searchTerm is required");
-  // Your code here!
+  for (const key in haystack) {
+    const value = haystack[key];
+    if (
+      typeof value === "string" &&
+      value.toLowerCase().includes(searchTerm.toLowerCase())
+    ) {
+      return true;
+    }
+  }
+  return false;
 };
 
 export const getWordFrequencies = (str) => {
