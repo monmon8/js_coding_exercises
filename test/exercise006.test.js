@@ -51,6 +51,16 @@ describe("createMatrix", () => {
   });
 });
 
-//   describe("areWeCovered", () => {
-
-//   })
+describe("areWeCovered", () => {
+  const staff = [
+    { name: "Sally", rota: ["Monday", "Tuesday", "Friday"] },
+    { name: "Pedro", rota: ["Saturday", "Sunday", "Tuesday", "Wednesday"] },
+    // ...etc,
+  ];
+  test("returns true if there are enough staff scheduled for the given day", () => {
+    expect(areWeCovered(staff, "Tuesday")).toBe(true);
+  });
+  test("returns false if there are enough staff scheduled for the given day", () => {
+    expect(areWeCovered(staff, "Sunday")).toBe(false);
+  });
+});
