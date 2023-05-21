@@ -60,7 +60,9 @@ export function findSentencesContaining(sentences, str) {
   if (!sentences) throw new Error("sentences is required");
   if (!str) throw new Error("str is required");
 
-  return sentences.filter((sentence) => sentence.includes(str));
+  return sentences.filter((sentence) =>
+    sentence.toLowerCase().includes(str.toLowerCase())
+  );
 }
 
 export function getLongestSides(triangles) {
