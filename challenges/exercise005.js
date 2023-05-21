@@ -23,7 +23,12 @@ export const count1sand0s = (str) => {
 
 export const reverseNumber = (n) => {
   if (n === undefined) throw new Error("n is required");
-  // Your code here!
+  let reversed = 0;
+  while (n !== 0) {
+    reversed = reversed * 10 + (n % 10);
+    n = Math.floor(n / 10);
+  }
+  return reversed;
 };
 
 export const sumArrays = (arrs) => {
