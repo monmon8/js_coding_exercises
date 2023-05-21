@@ -43,7 +43,7 @@ describe("isItPrime", () => {
 
 describe("createMatrix", () => {
   test("returns an array of n arrays", () => {
-    expect(createMatrix(3, "foo")).toBe([
+    expect(createMatrix(3, "foo")).toEqual([
       ["foo", "foo", "foo"],
       ["foo", "foo", "foo"],
       ["foo", "foo", "foo"],
