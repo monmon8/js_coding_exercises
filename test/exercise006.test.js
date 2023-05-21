@@ -41,9 +41,15 @@ describe("isItPrime", () => {
   });
 });
 
-//   describe("createMatrix", () => {
-
-//   })
+describe("createMatrix", () => {
+  test("returns an array of n arrays", () => {
+    expect(createMatrix(3, "foo")).toBe([
+      ["foo", "foo", "foo"],
+      ["foo", "foo", "foo"],
+      ["foo", "foo", "foo"],
+    ]);
+  });
+});
 
 //   describe("areWeCovered", () => {
 
