@@ -33,11 +33,11 @@ describe("getComplementaryDNA", () => {
 describe("isItPrime", () => {
   test("returns true if n is a prime number", () => {
     const n = 7;
-    expect(isValidDNA(n)).toBe(true);
+    expect(isItPrime(n)).toBe(true);
   });
   test("returns false if n is a prime number", () => {
     const n = 12;
-    expect(isValidDNA(n)).toBe(false);
+    expect(isItPrime(n)).toBe(false);
   });
 });
 
