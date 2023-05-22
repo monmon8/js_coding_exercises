@@ -55,6 +55,7 @@ describe("areWeCovered", () => {
   const staff = [
     { name: "Sally", rota: ["Monday", "Tuesday", "Friday"] },
     { name: "Pedro", rota: ["Saturday", "Sunday", "Tuesday", "Wednesday"] },
+    { name: "imane", rota: ["Monday", "Tuesday"] },
     // ...etc,
   ];
   test("returns true if there are enough staff scheduled for the given day", () => {

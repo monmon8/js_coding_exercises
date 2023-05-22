@@ -117,11 +117,6 @@ export const createMatrix = (n, fill) => {
 export const areWeCovered = (staff, day) => {
   if (staff === undefined) throw new Error("staff is required");
   if (day === undefined) throw new Error("day is required");
-  const requiredStaffCount = 3;
-
-  const scheduledStaffCount = staff.filter((person) =>
-    person.rota.includes(day)
-  ).length;
-
-  return scheduledStaffCount >= requiredStaffCount;
+  const staffCount = staff.filter((person) => person.rota.includes(day)).length;
+  return staffCount >= 3;
 };
